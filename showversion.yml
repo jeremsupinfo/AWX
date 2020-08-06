@@ -1,6 +1,7 @@
 ---
 - name: Show version
   hosts: all
+  gather_facts: False
   
   tasks:
 
