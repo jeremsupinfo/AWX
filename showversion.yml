@@ -1,7 +1,10 @@
 ---
+
 - name: Show version
   hosts: all
+  
 tasks:
+
   - name: run show version on remote devices
     dellos6_command:
       commands: show version
