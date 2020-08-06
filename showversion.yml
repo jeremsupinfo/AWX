@@ -1,0 +1,5 @@
+---
+tasks:
+  - name: run show version on remote devices
+    dellos10_command:
+      commands: show version
