@@ -1,8 +1,9 @@
 ---
-- hosts: 10.210.254.20
-  gather_facts: no
-
+- name: Hello World!
+  hosts: all
+ 
   tasks:
+ 
   - name: "Get Dell EMC OS6 Show version"
     dellos6_command:
       commands: ['show version']
