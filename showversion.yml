@@ -1,11 +1,12 @@
 ---
-- name: Show version
-  hosts: all
-  gather_facts: False
-  
-  tasks:
+- hosts: all
+  connection: network_cli
+  gather_facts: no
 
-   - name: run show version and check to see if output contains Dell
+  tasks:
+  - name: "Get Dell EMC OS6 Show version"
     dellos6_command:
-      commands: show version
- 
+      commands: ['show version']
+    register: show_ver
+
+  - debug: var=show_ver
